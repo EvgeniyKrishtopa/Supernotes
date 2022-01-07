@@ -9,6 +9,8 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "removeComments": true,
+    "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -18,9 +20,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "modules/*": ["src/modules/*"],
+      "store/*": ["src/store/*"],
+      "utils/*": ["src/utils/*"],
+    },
   },
   "include": [
-    "src"
+    "./src"
+  ],
+  "exclude": [
+    "./node_modules"
   ]
 }
